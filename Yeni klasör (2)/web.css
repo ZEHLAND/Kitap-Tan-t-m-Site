@@ -1,0 +1,390 @@
+/*SİTE AÇILIRKEN GENEL AYARLARI*/
+html,
+body,
+div,
+section,
+article,
+aside,
+header,
+hgroup,
+footer,
+nav,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+address,
+time,
+span,
+em,
+strong,
+img,
+ol,
+ul,
+li,
+th,
+td,
+tr{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  /*bu değer ile metinler kendisinden önce gelen metinlerin değerini alacakır.
+  Birbirlerine kalıtım vereceklerdir. */
+}
+/*a elementinin üzerine gelindiğinden rengi ve cerceve kalınlığı ne olsun ?*/
+a:hover{
+  color: #7B798F;
+  border-bottom: 1px solid #7B798F
+}
+/*sitenin rengi ne olsun */
+html {
+  background: rgb(245, 245, 245);
+}
+/*sitenin body genel ayarları*/
+body{
+  font:%100 Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  /*satırlar arası boşluk */
+
+  background: #fff;
+  color: rgb(76, 67, 65);
+  font-weight: normal;
+  /*metnin kalınlığı */
+  font-style: normal;
+  /*Yazı stili */
+}
+/*menu yazısını gizler */
+#mainNav h2{
+  display: none;
+}
+/*nav içerisinde yer alan ul etiketlerinin stillerini yok eder . */
+
+nav ul{
+  list-style: none;
+}
+/*yazıya bold özelliği katar */
+strong{
+  font-weight: bold;
+}
+/*em etiketinin kullanıldığı yerlerde yazı eğik olur . */
+em{
+  font-style: italic;
+}
+body{
+  width: 1280px;
+  margin: 0 auto;
+  /*siteyi tarayıcıda ortalar */
+}
+header{
+  height: 165px;
+}
+article{
+  /*içeriğin sola yaslı olmasını sağladık kendisinden sonra gelen kodlab galeri
+  alanıda soldan kalan boşluğa girecektir.*/
+  float: left;
+  width: 850px;
+  padding-left: 50px;
+  /*içerik soldan 50px uzak olsun */
+}
+aside{
+  /*icerik alanından arka kalan sağ taraftaki boşluğu aside aşanına girecektir.*/
+  float: right;
+  padding-right: 50px;
+  /*sağ taraf ile arasında 50px boşluk olsun . */
+}
+/*header stilleri */
+header{
+  background: rgb(0, 0, 0);
+  padding-top: 1px;
+  /* kendisinden spnra gelen menü alanı ile arasıda 1.5em kadarlık boşluk olsun*/
+  margin-bottom: 1.5em;
+  /*logo ve yazı soldan 50px uzak olsun */
+  padding-left: 50px;
+}
+header h1{
+  font-size: 3.2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  /*metin büyük harfe çevrilsin */
+  line-height: 165px;
+  /*h1 alanının satır olarak yukarıya olan uzaklığı */
+  margin-right: .5em;
+  float: left;
+  /*içerik soldan dizilsin */
+  padding-left: 100px;
+  /*içerik soldan 110px içeride olsun */
+  /*arka plan fotoğrafını belirliyoruz ve kendi alanında sola yassı olsun
+  ve ortada dursun */
+  background-image:  no-repeat left center;
+  color: #fff;
+  /*metin rengi */
+}
+header h2{
+  font-style: italic;;
+  font-weight: normal;
+  font-size: 1.4em;
+  color: #fff;
+  float: left;
+  text-transform: lowercase;
+  letter-spacing: .1em;
+  */karakterler arası boşluk*/
+  line-height: 165px;
+  /*satır yüksekliği*/
+}
+/*header içerisinde bulunan a elementinin varsayılan ve üzerine gelindiğinde
+ki durumu */
+header a,
+header a:hover{
+  color: #fff;
+  border: nano;
+  padding-left: 1em;
+}
+/*nav stilleri */
+#mainNav {
+  overflow: hidden;
+/*metinsel olarak taşan kısımları gizle
+mainNav alanının kendisinden spnra aşağıda gelen alana olan uzaklığı  */
+margin-bottom: 1.5em;
+padding-left: 50px;
+/*içerik soldan 50px uzkta olsun */
+}
+#mainNav li{
+/*menüde yazılar soldan dizilsin */
+float: left;
+margin-right: 3.6em;
+}
+#mainNav a{
+  text-transform: uppercase;
+  /*menülerin alt alta olmasını sağladık , block ile elementlerin block olarak
+  yer turmasını sağlanır.
+  Mesela span degerleri yan yana tanımladığımız da span elementler tarayıcıda
+  yan yana dizilir,bunun nedeni span etiketlerinin varsayılan olarak
+  inline olmasıdır . Eğer span etiketine css ile display
+  :block özelliği kazandırılırsa etiketler alt alta dizilecektir. */
+
+  display: block;
+  color: rgb(76, 67, 65);
+  border: nano;
+  font-size: 1.2em;
+  text-align: center;
+}
+#mainNav a em {
+  font-size: .8em;
+  display: block;
+  text-transform: lowercase;
+  color: rgb(76, 67, 65);
+}
+#mainNav a.current {
+  color: rgb(123, 121, 143);
+  cursor:default;
+}
+a.gallery{
+  background: url(../_images/icon_sprites_25.png) no-repeat 0 3px;
+  /*verilen aralıklar ile 4 ikon barındıran icon_sprites_25 den hangi aralıktaki
+  ikonu istediğimizi söyledik. */
+  padding-left: 20px;
+}
+a.gear{
+  background: url(../_images/icon_sprites_25) no-repeat 38px -98px;
+  padding-left: 20px;
+}
+a.interact{
+  background: url(../_images/icon_sprites_25) no-repeat 62px -197px;
+  padding-left: 22px;
+}
+a.shop{
+  background: url(../_images/icon_sprites_25) no-repeat 6px -297px;
+  padding-left: 18px;
+}
+/*banner stiller*/
+.banner{
+  height: 350px;
+  padding-left: 50px;
+  overflow: hidden;
+  background: url(../_images/gallery_banner.jpg) no-repeat;
+  margin-bottom: 4em;
+  position: relative;
+}
+/* Bu özellik ile bannerdan sonra gelecek olan alanların başlangıç noktalarını
+banner a göre almasını sağladık .Bu özelliği vermeseydik bannerdan sonra gelen
+alanlar kendilerinini tarayıcıda sayfa içerisinde en üst konumdan
+konumlandırmaya başlayacaklardı. bu da sayfada kaymalara neden olacaktı .*/
+.banner h1 {
+  font-size: 2.2em;
+  color: #fff;
+  padding-top: 290px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.banner p{
+  width: 300px;
+  padding: 15px 15px 0;
+  height: 335px;
+  font-size: 1.2em;
+  color: #fff;
+  background: rgba(30, 144, 255, 0.8);
+  /* buradaki son değer rengin transparan durumunu belirler. 0 ile 1 arasında
+  bir değer gireriz. Değer ne kadar küçük olursa transparan o kadar fazla olur.*/
+position: absolute;
+top: 0;
+right: 0;
+}
+/*article stiller */
+article section{
+  border-bottom: 2px solid rgb(76, 67, 65);
+  margin-bottom: 2em;
+}
+article h1,
+article h2,
+article h3{
+  font-family: Georgia, Times, "Times New Roman",serif;
+}
+article > h1{
+  font-size: 1.8em;
+  border-bottom: 2px solid rgb(76, 67, 65);
+  margin-bottom: 1.5em;
+}
+article h2{
+  font-size: 1.4em;
+  border-bottom: 2px solid rgb(76, 67, 65);
+  margin-top: 1.5em;
+}
+article h2 a{
+  color: rgb(76, 67, 65);
+  border: none;
+}
+article p{
+  font-size: 1em;
+  margin: 1.2em 0;
+}
+article u1{
+  margin: 0 0 1em 50px;
+}
+#home h1{
+  background-position:  right -790px;
+  padding: 20px 0 5px;
+}
+#gallery{
+  margin-top: 2em;
+}
+#gallery h1{
+  background: none;
+  padding: 0;
+  border: none;
+  margin: 0;
+  font-size: 6.4em;
+  font-weight: normal;
+  font-style: normal;
+  color: rgba(255, 255, 255, .6);
+  text-shadow: 2px 2px 0 rgba(123, 121, 143, .6);
+}
+/*form stiller */
+aside h2 {
+  font-family: Georgia,Times, "Times New Roman",serif;
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 1em;
+  clear: both;
+}
+aside nav{
+  margin-bottom: 2em;
+}
+aside nav a{
+  display: block;
+  padding-left: 16px;
+  border: nano;
+  color: rgb(76, 67, 65);
+  line-height: 2em;
+  margin-bottom: 1px;
+}
+aside nav li{
+  background: rgb(216, 213, 188);
+}
+aside nav a:hover {
+  color: #fff;
+  border: nano
+  background:rgb(30, 144, 255);
+}
+.contest img{
+  display: block;
+  margin: 0 auto;;
+  margin-bottom: 1em;
+}
+.contest p{
+  font-size: .9em;
+  margin: 0 auto 1.5em;
+}
+.enter a{
+  float: right;
+  border: 1px solid #999;
+  margin: 1em 0 1.5em;
+  color: rgb(76, 67, 65);
+  width: 5em;
+  height: 1.4em;
+  line-height: 1.4em;
+  text-align: center;
+  background: rgb(226, 226, 226);
+}
+.enter a:hover{
+  background: rgb(254, 254, 254);
+}
+.notice{
+  width: 300px;
+}
+a{
+  text-decoration: none;
+  color: rgb(219, 126, 64);
+  border-bottom: 1px dotted rgb(219, 126, 64);
+}
+.notice{
+  width: 300px;
+}
+aside nav li:nth-child(even){
+  background: rgb(237, 228, 214);
+}
+#mainNav a:hover{
+  color: rgb(219, 126, 64);
+}
+input[type="search"]{
+  width: 250px;
+}
+#sayfaFooter{
+  clear: both;
+  overflow: hidden;
+  height: 150px;
+  color: rgb(255,255, 255);
+}
+/*footer stiller */
+#sayfaFooter{
+  background: rgb(0, 0, 0);
+  padding-top: 1.5em;
+}
+#sayfaFooter label {
+  display: block;;
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+#sayfaFooter p{
+  float: right;
+  clear: right;
+  margin-right: 3.9%;
+  text-align: right;
+}
+#sayfaFooter a{
+  display: block;
+  height: 100px;
+  line-height: 100px;
+  border: nano;
+  color: rgb(255, 255, 255);
+  padding-left: 95px;
+  background: url(../_images/tweet_90.png) no-repeat;
+}
+#sayfaFooter form{
+  float: left;
+  margin-left: 50px;
+}
